@@ -1,10 +1,10 @@
-name: Build-skil-docker
+name: BuildNoDOcer
 
 on: workflow_dispatch
 
 jobs:
   build:
-    name: Build-skil-docker
+    name: BuildNoDOcer
     runs-on: ubuntu-latest
     steps:
       - name: Set up Go 1.20
