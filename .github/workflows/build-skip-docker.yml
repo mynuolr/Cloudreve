@@ -1,10 +1,10 @@
-name: Build
+name: BuildNoDOcer
 
 on: workflow_dispatch
 
 jobs:
   build:
-    name: Build
+    name: BuildNoDOcer
     runs-on: ubuntu-latest
     steps:
       - name: Set up Go 1.20
@@ -26,6 +26,6 @@ jobs:
         with:
           distribution: goreleaser
           version: latest
-          args: release --clean --skip-validate
+          args: release --clean --skip-validate --skip docker
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
